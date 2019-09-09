@@ -1,0 +1,121 @@
+main{
+    position: relative;
+}
+
+.rabbit{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: -1;
+}
+
+h1{
+    color: orange;
+    text-transform: uppercase;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+}
+
+.swicher{
+    margin-left: 15px;
+}
+
+.calc{
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    margin: 40px auto;
+    background: #333;
+    border-radius: 20px;
+    padding: 15px 25px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border: 3px solid orange;
+}
+
+.display{
+    display: block;
+    background: #333;
+    border: none;
+    font-size: 34px;
+    color: orange;
+    border: 2px solid orange;
+    line-height: 60px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    transition: .3s all;
+}
+
+.display::placeholder{
+    color:#fff;
+}
+
+.numField{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.opers{
+    display: flex;
+    flex-direction: column;
+}
+
+.functional{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nums{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.operators{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 150px;
+}
+
+button{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    color: #000;
+    justify-self: center;
+    cursor: pointer;
+    margin: 5px;
+    transition: .3s all;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+button:hover{
+    background-color:  orange;
+    transition: .3s all;
+}
+button:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+.hide{
+    opacity: 0;
+    transition: .3s all;
+}
+.online{
+    position: relative;
+    background-color: orange;
+    color: rgba(0, 0, 0, 0);
+}
+.online::before{
+    content: "OFF";
+    position: absolute;
+    color: #000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
